@@ -1,6 +1,7 @@
 import React from "react";
 import sun from "./../../assets/icons/sun.svg";
 import moon from "./../../assets/icons/moon.svg";
+import "./styles.css";
 
 const Navbar = () => {
   return (
