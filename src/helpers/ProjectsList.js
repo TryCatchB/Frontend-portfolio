@@ -38,20 +38,17 @@ export const projects = [
     skills: "React, Node.js, MongoDB",
     img: project04,
     imgBig: project04Big,
-    gitHubLink: "https://github.com",
   },
   {
     title: "Landing",
     skills: "React, Node.js, MongoDB",
     img: project05,
     imgBig: project05Big,
-    gitHubLink: "https://github.com",
   },
   {
     title: "Gaming community",
     skills: "React, Node.js, MongoDB",
     img: project06,
     imgBig: project06Big,
-    gitHubLink: "https://github.com",
   },
 ];
