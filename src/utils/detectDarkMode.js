@@ -1,9 +1,9 @@
-export default detectDarkMode = () => {
+export const detectDarkMode = () => {
   if (
     window.matchMedia &&
     window.matchMedia("(prefers-color-scheme: dark)").matches
   ) {
-    btnDarkMode.classList.add("dark-mode-btn--active");
-    document.body.classList.add("dark");
+    return "dark";
   }
+  return "light";
 };
