@@ -58,11 +58,11 @@ body {
 }
 
 #root,
-.App {
+.app {
   min-height: 100vh;
 }
 
-.App {
+.app {
   display: flex;
   flex-direction: column;
 }

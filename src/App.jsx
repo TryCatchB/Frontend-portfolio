@@ -10,7 +10,7 @@ import "./styles/main.css";
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       <Router>
         <ScrollToTop />
         <Navbar />
