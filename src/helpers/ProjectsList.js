@@ -1,6 +1,5 @@
 import vkCopy from "../assets/projects/VK-copy.png";
-import project02 from "../assets/projects/02.jpg";
-import project02Big from "../assets/projects/02-big.jpg";
+import netflixCopy from "../assets/projects/Netflix-copy.png";
 import toDoApp from "../assets/projects/to-do_app.png";
 import zlatmax from "../assets/projects/zlatmax.png";
 import relvise from "../assets/projects/relvise.png";
@@ -17,8 +16,7 @@ export const projects = [
   {
     title: "Netflix-copy",
     skills: "React, TypeScript, Redux, Vite",
-    img: project02,
-    imgBig: project02Big,
+    img: netflixCopy,
     link: "",
     gitHubLink: "https://github.com/TryCatchB/Netflix_copy",
   },
