@@ -9,11 +9,9 @@ const BtnDarkMode = () => {
   const [darkMode, setDarkMode] = useLocalStorage("darkMode", detectDarkMode());
 
   useEffect(() => {
-    if (darkMode === "dark") {
-      document.body.classList.add("dark");
-    } else {
-      document.body.classList.remove("dark");
-    }
+    darkMode === "dark"
+      ? document.body.classList.add("dark")
+      : document.body.classList.remove("dark");
   }, [darkMode]);
 
   useEffect(() => {
