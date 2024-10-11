@@ -1,4 +1,4 @@
-import React from "react";
+import PropTypes from "prop-types";
 import { NavLink } from "react-router-dom";
 import "./styles.css";
 
@@ -11,6 +11,12 @@ const Project = ({ title, img, index }) => {
       </li>
     </NavLink>
   );
+};
+
+Project.propTypes = {
+  title: PropTypes.string.isRequired,
+  img: PropTypes.string.isRequired,
+  index: PropTypes.number.isRequired,
 };
 
 export default Project;
