@@ -1,7 +1,7 @@
-import React from "react";
 import { useParams } from "react-router-dom";
 import { projects } from "./../helpers/ProjectsList";
 import BtnGitHub from "../components/btnGitHub/BtnGitHub";
+import BtnToSite from "../components/btnToSite/btnToSite";
 
 const Project = () => {
   const { id } = useParams();
@@ -15,7 +15,7 @@ const Project = () => {
           <h1 className="title-1">{project.title}</h1>
 
           <img
-            src={project.imgBig}
+            src={project.img}
             alt={project.title}
             className="project-details__cover"
           />
@@ -24,7 +24,10 @@ const Project = () => {
             <p>Skills: {project.skills}</p>
           </div>
 
-          {project.gitHubLink && <BtnGitHub link="https://github.com" />}
+          <div className="btn-block">
+            {project.link && <BtnToSite link={project.link} />}
+            {project.gitHubLink && <BtnGitHub link={project.gitHubLink} />}
+          </div>
         </div>
       </div>
     </main>

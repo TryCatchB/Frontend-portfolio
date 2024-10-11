@@ -1,4 +1,3 @@
-import React from "react";
 import Header from "../components/header/Header";
 
 const Home = () => {
@@ -11,8 +10,9 @@ const Home = () => {
             <li className="content-list__item">
               <h2 className="title-2">Frontend</h2>
               <p>
-                JavaScript, TypeScript, ReactJS, Redux, HTML, CSS, NPM,
-                BootStrap, MaterialUI, TailwindCSS.
+                JavaScript, TypeScript, ReactJS, Redux, HTML, CSS, NPM, NVM,
+                NextJS, Rest, ExpressJS, BootStrap, MaterialUI, TailwindCSS,
+                FireBase, Vite.
               </p>
             </li>
           </ul>

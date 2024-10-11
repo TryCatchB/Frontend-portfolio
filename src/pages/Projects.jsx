@@ -1,4 +1,3 @@
-import React from "react";
 import Project from "../components/projcet/Project";
 import { projects } from "./../helpers/ProjectsList";
 

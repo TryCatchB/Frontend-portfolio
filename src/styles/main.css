@@ -183,6 +183,11 @@ body {
   line-height: 1.3;
 }
 
+.btn-block {
+  display: flex;
+  gap: 15px
+}
+
 /* Content list */
 
 .content-list {
