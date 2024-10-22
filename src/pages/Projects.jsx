@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { projects } from "../helpers/ProjectsList.js";
-import Project from "./Project.jsx";
+import ProjectCard from "../components/ProjectCard/ProjectCard.jsx";
 import ProjectSkeleton from "../skeletons/ProjectSkeleton.jsx";
 
 const Projects = () => {
@@ -24,13 +24,13 @@ const Projects = () => {
         <h2 className="title-1">Projects</h2>
         <ul className="projects">
           {loading
-            ? Array.from({ length: data.length }).map((_, index) => (
+            ? Array.from({ length: projects.length }).map((_, index) => (
                 <li key={index}>
                   <ProjectSkeleton />
                 </li>
               ))
             : data.map((project, index) => (
-                <Project
+                <ProjectCard
                   key={index}
                   title={project.title}
                   img={project.img}

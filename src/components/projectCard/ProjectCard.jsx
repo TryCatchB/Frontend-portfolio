@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import { NavLink } from "react-router-dom";
 import "./styles.css";
 
-const Project = ({ title, img, index }) => {
+const ProjectCard = ({ title, img, index }) => {
   return (
     <NavLink to={`/project/${index}`}>
       <li className="project">
@@ -13,10 +13,10 @@ const Project = ({ title, img, index }) => {
   );
 };
 
-Project.propTypes = {
+ProjectCard.propTypes = {
   title: PropTypes.string.isRequired,
   img: PropTypes.string.isRequired,
   index: PropTypes.number.isRequired,
 };
 
-export default Project;
+export default ProjectCard;

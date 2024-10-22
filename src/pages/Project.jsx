@@ -6,8 +6,7 @@ import BtnToSite from "../components/btnToSite/BtnToSite";
 const Project = () => {
   const { id } = useParams();
 
-  const project = projects[id];
-  console.log(project);
+  const project = projects[Number(id)];
 
   return (
     <main className="section">
