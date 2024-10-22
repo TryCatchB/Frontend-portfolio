@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { projects } from "./../helpers/ProjectsList";
+import { projects } from "./../helpers/ProjectsList.js";
 import BtnGitHub from "../components/btnGitHub/BtnGitHub";
 import BtnToSite from "../components/btnToSite/BtnToSite";
 
@@ -7,6 +7,7 @@ const Project = () => {
   const { id } = useParams();
 
   const project = projects[id];
+  console.log(project);
 
   return (
     <main className="section">
