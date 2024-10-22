@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { projects } from "../helpers/ProjectsList.js";
-import ProjectCard from "../components/ProjectCard/ProjectCard.jsx";
+import ProjectCard from "../components/projectCard/ProjectCard.jsx";
 import ProjectSkeleton from "../skeletons/ProjectSkeleton.jsx";
 
 const Projects = () => {
