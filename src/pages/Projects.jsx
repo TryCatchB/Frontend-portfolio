@@ -1,40 +1,36 @@
-import { useEffect, useState } from "react";
-import { projects } from "../helpers/ProjectsList.js";
+import { useQuery } from "@tanstack/react-query";
+import axios from "axios";
 import ProjectCard from "../components/projectCard/ProjectCard.jsx";
-import ProjectSkeleton from "../skeletons/ProjectSkeleton.jsx";
+import ProjectsSkeleton from "../skeletons/ProjectsSkeleton.jsx";
+
+const fetchProjects = async () => {
+  const { data } = await axios.get("http://localhost:3000/projects");
+  return data;
+};
 
 const Projects = () => {
-  const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const fetchProjects = async () => {
-      await new Promise((resolve) => setTimeout(() => resolve(2000)));
-
-      setData(projects);
-
-      setLoading(false);
-    };
-    fetchProjects();
-  }, []);
+  const { data, isLoading } = useQuery({
+    queryKey: ["projects"],
+    queryFn: fetchProjects,
+  });
 
   return (
     <main className="section">
       <div className="container">
         <h2 className="title-1">Projects</h2>
         <ul className="projects">
-          {loading
-            ? Array.from({ length: projects.length }).map((_, index) => (
+          {isLoading
+            ? Array.from({ length: 6 }).map((_, index) => (
                 <li key={index}>
-                  <ProjectSkeleton />
+                  <ProjectsSkeleton />
                 </li>
               ))
-            : data.map((project, index) => (
+            : data.map((project) => (
                 <ProjectCard
-                  key={index}
+                  key={project.id}
                   title={project.title}
-                  img={project.img}
-                  index={index}
+                  image={project.image}
+                  id={project.id - 1}
                 />
               ))}
         </ul>

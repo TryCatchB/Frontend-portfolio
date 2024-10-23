@@ -1,6 +1,6 @@
 import Contacts from "../pages/Contacts";
 import Home from "../pages/Home";
-import Project from "../pages/Project";
+import ProjectDetails from "../pages/ProjectDetails";
 import Projects from "../pages/Projects";
 
 export const routes = [
@@ -14,7 +14,7 @@ export const routes = [
   },
   {
     path: "/project/:id",
-    component: Project,
+    component: ProjectDetails,
   },
   {
     path: "/contacts",

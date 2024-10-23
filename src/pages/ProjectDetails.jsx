@@ -1,12 +1,25 @@
+import { useQuery } from "@tanstack/react-query";
 import { useParams } from "react-router-dom";
-import { projects } from "./../helpers/ProjectsList.js";
+import axios from "axios";
+import ProjectDetailsSkeleton from "../skeletons/ProjectDetailsSkeleton";
 import BtnGitHub from "../components/btnGitHub/BtnGitHub";
 import BtnToSite from "../components/btnToSite/BtnToSite";
 
-const Project = () => {
+const fetchProjectById = async (id) => {
+  const { data } = await axios.get(`http://localhost:3000/projects/${id + 1}`);
+
+  return data;
+};
+
+const ProjectDetails = () => {
   const { id } = useParams();
 
-  const project = projects[Number(id)];
+  const { data: project, isLoading } = useQuery({
+    queryKey: ["projects", id],
+    queryFn: () => fetchProjectById(Number(id)),
+  });
+
+  if (isLoading) return <ProjectDetailsSkeleton />;
 
   return (
     <main className="section">
@@ -15,7 +28,7 @@ const Project = () => {
           <h1 className="title-1">{project.title}</h1>
 
           <img
-            src={project.img}
+            src={`src/assets/projects/${project.image}`}
             alt={project.title}
             className="project-details__cover"
           />
@@ -34,4 +47,4 @@ const Project = () => {
   );
 };
 
-export default Project;
+export default ProjectDetails;
