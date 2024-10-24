@@ -4,7 +4,7 @@ import ProjectCard from "../components/projectCard/ProjectCard.jsx";
 import ProjectsSkeleton from "../skeletons/ProjectsSkeleton.jsx";
 
 const fetchProjects = async () => {
-  const { data } = await axios.get("http://localhost:3000/projects");
+  const { data } = await axios.get(import.meta.env.VITE_BASE_API + "/projects");
   return data;
 };
 

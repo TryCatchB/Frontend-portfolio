@@ -19,17 +19,17 @@ const ProjectDetailsSkeleton = () => {
         foregroundColor="#ecebeb"
       >
         {/* Title */}
-        <rect x="170" y="20" rx="5" ry="5" width="250" height="40" />
+        <rect x="170" y="40" rx="5" ry="5" width="250" height="40" />
 
         {/* Image */}
-        <rect x="20" y="80" rx="5" ry="5" width="560" height="300" />
+        <rect x="20" y="120" rx="5" ry="5" width="864" height="339" />
 
         {/* Skills section */}
-        <rect x="20" y="400" rx="5" ry="5" width="560" height="30" />
+        <rect x="100" y="490" rx="5" ry="5" width="400" height="30" />
 
         {/* Buttons section */}
-        <rect x="130" y="450" rx="5" ry="5" width="150" height="40" />
-        <rect x="320" y="450" rx="5" ry="5" width="150" height="40" />
+        <rect x="130" y="550" rx="5" ry="5" width="150" height="40" />
+        <rect x="320" y="550" rx="5" ry="5" width="150" height="40" />
       </ContentLoader>
     </div>
   );

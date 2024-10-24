@@ -10,7 +10,7 @@ const ProjectsSkeleton = () => {
       backgroundColor="#f3f3f3"
       foregroundColor="#ecebeb"
     >
-      <rect x="10" y="10" rx="5" ry="5" width="400" height="200" />
+      <rect x="10" y="10" rx="5" ry="5" width="400" height="176" />
       {/* Image */}
       <rect x="10" y="240" rx="5" ry="5" width="100" height="30" />
       {/* Title */}

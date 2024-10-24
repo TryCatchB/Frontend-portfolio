@@ -6,7 +6,9 @@ import BtnGitHub from "../components/btnGitHub/BtnGitHub";
 import BtnToSite from "../components/btnToSite/BtnToSite";
 
 const fetchProjectById = async (id) => {
-  const { data } = await axios.get(`http://localhost:3000/projects/${id + 1}`);
+  const { data } = await axios.get(
+    import.meta.env.VITE_BASE_API + `/projects/${id + 1}`
+  );
 
   return data;
 };
@@ -28,7 +30,7 @@ const ProjectDetails = () => {
           <h1 className="title-1">{project.title}</h1>
 
           <img
-            src={`src/assets/projects/${project.image}`}
+            src={`../src/assets/projects/${project.image}`}
             alt={project.title}
             className="project-details__cover"
           />
