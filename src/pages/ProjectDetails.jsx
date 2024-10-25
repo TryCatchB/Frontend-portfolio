@@ -23,8 +23,6 @@ const ProjectDetails = () => {
 
   if (isLoading) return <ProjectDetailsSkeleton />;
 
-  const img = `../src/assets/projects/${project.image}`;
-
   return (
     <main className="section">
       <div className="container">
@@ -32,7 +30,7 @@ const ProjectDetails = () => {
           <h1 className="title-1">{project.title}</h1>
 
           <img
-            src={img}
+            src={project.image}
             alt={project.title}
             className="project-details__cover"
           />
