@@ -35,9 +35,9 @@ const ProjectDetails = () => {
             className="project-details__cover"
           />
 
-          <div className="project-details__desc">
-            <p>Skills: {project.skills}</p>
-          </div>
+          <p className="project-details__desc">description</p>
+
+          <p className="project-details__skills">Skills: {project.skills}</p>
 
           <div className="btn-block">
             {project.link && <BtnToSite link={project.link} />}
