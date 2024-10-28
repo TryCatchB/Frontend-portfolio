@@ -56,7 +56,7 @@ body {
   background-color: var(--page-bg);
   color: var(--text-color);
 }
-
+ 
 #root,
 .app {
   min-height: 100vh;
@@ -240,6 +240,10 @@ body {
     max-width: 700px;
     text-align: center;
     margin-inline: auto;
+    border: 2px solid rgb(88, 86, 86);
+    border-radius: 10px;
+    padding: 10px;
+    background-color: black;
 
     &:not(:last-child) {
       margin-bottom: 30px;
