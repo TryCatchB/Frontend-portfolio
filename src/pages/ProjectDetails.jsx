@@ -27,21 +27,22 @@ const ProjectDetails = () => {
     <main className="section">
       <div className="container">
         <div className="project-details">
-          <h1 className="title-1">{project.title}</h1>
-
-          <img
-            src={project.image}
-            alt={project.title}
-            className="project-details__cover"
-          />
-
-          <p className="project-details__desc">description</p>
-
-          <p className="project-details__skills">Skills: {project.skills}</p>
-
-          <div className="btn-block">
-            {project.link && <BtnToSite link={project.link} />}
-            {project.gitHubLink && <BtnGitHub link={project.gitHubLink} />}
+          <div>
+            <h1 className="title-1">{project.title}</h1>
+            <img
+              src={project.image}
+              alt={project.title}
+              className="project-details__cover"
+            />
+          </div>
+          <div className="project-details__meta">
+            <h3 className="title-2">Description</h3>
+            <p className="project-details__desc">{project.description}</p>
+            <p className="project-details__skills">Skills: {project.skills}</p>
+            <div className="btn-block">
+              {project.link && <BtnToSite link={project.link} />}
+              {project.gitHubLink && <BtnGitHub link={project.gitHubLink} />}
+            </div>
           </div>
         </div>
       </div>
