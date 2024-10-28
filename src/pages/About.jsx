@@ -10,8 +10,8 @@ const About = () => {
           <strong>HTML</strong> and <strong>CSS</strong> for styling. The
           project also implements navigation using <strong>React Router</strong>
           , data management through <strong>React Query</strong>, as well as the
-          use of axios to work with APIs. In order to ensure code quality, I
-          have integrated <strong>eslint</strong>. Also I used{" "}
+          use of <strong>axios</strong> to work with APIs. In order to ensure
+          code quality, I have integrated <strong>eslint</strong>. Also I used{" "}
           <strong>React-Content-Loader</strong> for displaying loading
           placeholders while data is being fetched from APIs.
         </p>
