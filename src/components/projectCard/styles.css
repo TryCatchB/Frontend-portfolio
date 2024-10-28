@@ -16,6 +16,11 @@
   background-color: var(--project-card-bg);
   box-shadow: var(--box-shadow);
   border-radius: 10px;
+  transition: box-shadow 0.3s ease-in-out;
+
+  &:hover {
+    box-shadow: 0 8px 20px rgb(70, 1, 54);
+  }
 
   & .project__img {
       min-height: 183px;
