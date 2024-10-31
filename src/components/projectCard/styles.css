@@ -5,6 +5,7 @@
   column-gap: 30px;
   row-gap: 30px;
   max-height: 100vh;
+  overscroll-behavior: contain;
 
   & a {
     height: 30.7%;
