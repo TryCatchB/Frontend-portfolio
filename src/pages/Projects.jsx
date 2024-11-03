@@ -1,12 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
-import axios from "axios";
+import fetchProjects from "../utils/fetchProjects.js";
 import ProjectCard from "../components/projectCard/ProjectCard.jsx";
 import ProjectsSkeleton from "../skeletons/ProjectsSkeleton.jsx";
-
-const fetchProjects = async () => {
-  const { data } = await axios.get(`${import.meta.env.VITE_BASE_API}/projects`);
-  return data;
-};
 
 const Projects = () => {
   const { data, isLoading } = useQuery({
@@ -16,11 +11,11 @@ const Projects = () => {
 
   return (
     <main className="section">
-      <div className="container">
+      <div className="container container_medium">
         <h2 className="title-1">Projects</h2>
         <ul className="projects">
           {isLoading
-            ? Array.from({ length: 6 }).map((_, index) => (
+            ? Array.from({ length: 8 }).map((_, index) => (
                 <li key={index}>
                   <ProjectsSkeleton />
                 </li>
